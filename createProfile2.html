@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans"; font-size: 15px; font-style: normal; font-variant: normal;
+}
+
+/* Style the header */
+.header {
+  background-color: #DC143C;
+  padding: 2px;
+  text-align: center;
+  color: aliceblue;
+}
+
+
+/* Style the top navigation bar */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  height: 100%;
+
+}
+
+/* Middle column */
+.column.middle {
+  width: 75%;
+  height: 100%;
+  background-color: #DC143C;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: gray;
+  font-size: 17px;
+  border: 1px solid #ccc; 
+  clear: top right;
+
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+}
+
+#myMenu li a {
+  background-color: none;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  border: 1px solid gray;
+  font-family: "Open Sans";font-style: normal; font-variant: normal;
+
+
+  
+}
+li:nth-child(n+2) {
+    margin-bottom: -1px;}
+
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* pfrofile image*/
+.wrapper {
+  padding: 0px;
+  height: 100px;
+  width: 150px;
+  float: left;
+  
+}
+button{
+    background-color: #DC143C;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    font-size: 15px;
+    color: #ccc;
+}
+button:hover{
+  background-color: #008CBA;
+  color: white;
+}
+
+#proimg{
+    font-size: 15px;
+    color: gray;
+}
+
+/*form*/
+.form-style-1 {
+	margin:10px auto;
+	max-width: 550px;
+	padding: 0px 0px 0px 0px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    /*/border: solid red;
+    border-width:thin;
+    border-spacing: 15px 50px;/*/
+    
+
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>V <i>to</i> Hire</h1>
+  <h2>Create Your Profile</h2>
+  <p>Show your Skills up to your Employer</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Create your Profile</a>
+  <a href="#">Test your Language</a>
+  <a href="#">Apply for a Vacancy</a>
+  <input type="text" placeholder="Search.." style="float:right;">
+</div>
+
+
+  <div class="row">
+    <div class="column side">
+      <ul id="myMenu">
+        <li><a href="#">General Info.</a></li>
+        <li><a href="#">Career Intersts</a></li>
+        <li><a href="#">Exprience</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Online Presence</a></li>
+        <li><a href="#">Upload CV</a></li>
+        <li><a href="#">Achievment</a></li>
+      </ul>
+      <p>Times New Roman is a serif typeface designed for legibility in body text. It was commissioned by the British newspaper The Times in 1931 and conceived by Stanley Morison, the artistic advisor to the British branch of the printing equipment company Monotype, in collaboration with Victor Lardent, a lettering artist in the Times' advertising department.[1][2] Although no longer used by The Times, Times New Roman is still very common in book and general printing.[3] It has become one of the most popular and influential typefaces in history and a standard typeface on most desktop computers.[4][5]
+
+        Times New Roman's creation took place through the influence of Stanley Morison of Monotype. Morison was an artistic director at Monotype, historian of printing and informal adviser to The Times. Asked to advise on a redesign, he recommended that they change their text typeface from a spindly and somewhat dated nineteenth-century face to a more robust, solid design, returning to traditions of printing from the eighteenth century and before.[6][7][a][11][12][b] This matched a common trend in printing tastes of the period.
+        
+        The new face was drawn by Victor Lardent, an artist from the advertising department of The Times, with Morison consulting, before refinement by the Monotype drawing office.[c] Morison proposed an older Monotype typeface named Plantin as a basis for the design, and Times New Roman mostly matches Plantin's dimensions. The main change was that the contrast between strokes was enhanced to give a crisper image. As a typeface designed for newspaper printing, Times New Roman has a high x-height, short descenders to allow tight linespacing and a relatively condensed appearance. The new design made its debut in The Times on 3 October 1932.[13][14] After one year, the design was released for commercial sale.[15] Although Morison may not have literally drawn the design, his influence on its concept was sufficient that he felt that he could take credit for it as "my one effort at designing a font".[16][d] In Times New Roman's name, Roman is a reference to the regular or roman style (sometimes also called Antiqua), the first part of the Times New Roman family to be designed.[17] Roman type has roots in Italian printing of the late 15th and early 16th centuries, but Times New Roman's design has no connection to Rome or to the Romans.
+        
+        The Times stayed with Times New Roman for 40 years, but new production techniques and the format change from broadsheet to tabloid in 2004 have caused it to switch typeface five times from 1972 to 2007. However, all the new fonts have been variants of the original New Roman typeface. Once released for commercial sale, Times New Roman became extremely successful, becoming Monotype's best-selling typeface of all time in metal type.[18][19]</p>
+    </div>
+
+
+
+  <div class="column.middle">
+    <h2><img src="profile.png" class="wrapper">Profile Photo<br><span id="proimg">You can upload a .jpg, .png, or .gif photo with max size of 5MB </span></h2>
+    <button>Upload Your Photo</button><br><br>
+  </div>
+
+
+  <form>
+        <ul class="form-style-1">
+            <li>
+                <label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First"/> 
+                <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+            <li>
+
+            <li>    
+                <label for="Birth Date*">Birth Date*</label>
+                <select name="Day*" id="Day" required aria-required="true" placeholder="Day">
+                <option value="Day">Day</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="03">04</option>
+                <option value="03">05</option>
+                <option value="03">06</option>
+                <option value="03">07</option>
+                <option value="03">08</option>
+                <option value="03">09</option>
+                <option value="03">10</option>
+                <option value="03">11</option>
+                <option value="03">12</option>
+                <option value="03">13</option>
+                <option value="03">14</option>
+                <option value="03">15</option>
+                <option value="03">16</option>
+                <option value="03">17</option>
+                <option value="03">18</option>
+                <option value="03">19</option>
+                <option value="03">20</option>
+                <option value="03">21</option>
+                <option value="03">22</option>
+                <option value="03">23</option>
+                <option value="03">24</option>
+                <option value="03">25</option>
+                <option value="03">26</option>
+                <option value="03">27</option>
+                <option value="03">28</option>
+                <option value="03">29</option>
+                <option value="03">30</option>
+                <option value="03">31</option>
+            </select>
+            <select name="Month" id="Month" required aria-required="true" placeholder="Month">
+                    <option value="Month">Month</option>
+                    <option value="January ">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+            </select>
+
+            <select name="Year" id="Year" required aria-required="true" placeholder="Year">
+                    <option value="Year">Year</option>
+                    <option value="1980">1980</option>
+                    <option value="1981">1981</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1995">1994</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+            </select>
+            </li><br>
+
+
+            <li>
+                <label for="Gender*">Gender*</label>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br>
+
+            </li>
+                
+
+
+            <li>    
+                    <label for="Nationality*">Nationality*</label>
+                    <select name="Nationality*" id="Nationality" required aria-required="true" placeholder="Nationality">
+                    <option value="Day">Nationality</option>
+                    <option value="Afghan">Afghan</option>
+                    <option value="Algerian">Algerian</option>
+                    <option value="Australian">Australian</option>
+                    <option value="Bahraini">Bahraini</option>
+                    <option value="British">British</option>
+                    <option value="Egyptian">Egyptian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Kuwaiti">Kuwaiti</option>
+                    <option value="Libyan">Libyan</option>
+                    <option value="Omani">Omani</option>
+                    <option value="Qatari">Qatari</option>
+                    <option value="Saudi Arabian">Saudi Arabian</option>
+                    <option value="UAE ">UAE</option>
+                    <option value="Yemeni">Yemeni</option>
+                    <option value="Zambian">Zambian</option>
+                    
+                </select>
+
+
+
+
+
+
+
+
+
+
+
+
+                <label>Email <span class="required">*</span></label>
+                <input type="email" name="field3" class="field-long" />
+            </li>
+            <li>
+                <label>Subject</label>
+                <select name="field4" class="field-select">
+                <option value="Advertise">Advertise</option>
+                <option value="Partnership">Partnership</option>
+                <option value="General Question">General</option>
+                </select>
+            </li>
+            <li>
+                <label>Your Message <span class="required">*</span></label>
+                <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="Submit" />
+            </li>
+        </ul>
+        </form>
+
+
+</body>
+</html>
